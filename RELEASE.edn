@@ -11,11 +11,17 @@
                          :schema-change :versioned-successor-required}
  :release/dependency-identities
  {:clojure [{:lib org.clojure/clojure :version "1.12.0"}]
-  :rust {:lockfile "rust/Cargo.lock"}}
+  :rust {:lockfile "Cargo.lock"}}
  :release/maintenance {:owner :prf-foundation
                        :update-policy :reviewed-addition-or-versioned-successor}
- :release/provenance {:candidate-bundle-script "scripts/package_canonical.py"
-                      :checksum-sidecar "releases/prf-canonical-<version>.tar.gz.sha256"
+ :release/provenance {:source-integration-revision
+                      "0d443ef6387b6e4229c6692d7b4dcab186cade0c"
+                      :source-tree-hash
+                      "114d2a32d25c7d0bcf523ca56e83082631ffb05a"
+                      :prior-candidate-bundle
+                      "prf-canonical-0.1.0-rc.1.tar.gz"
+                      :prior-candidate-bundle-sha256
+                      "692d68d5e0f99450ae8da1bc857eb477f0d64e25550eeadff9646bf988d92aa6"
                       :publication :unpublished}
  :release/conformance {:status :passed
                        :vectors "clj/test/resources/canonical-v1-vectors.tsv"
